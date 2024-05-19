@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Image</title>
+    <style>
+        /* Optional: Add CSS styling to center the image */
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome</h1>
     <img id="randomImage" src="" alt="Random Image">
-    
     <script>
-        // Array containing the filenames of your images
+        // Array containing file names of images
         var images = [
+
            "files/images/02.png",
            "files/images/hsrsfrthsrth.png",
            "files/images/IMG_20161101_113139.jpg",
@@ -19,19 +32,23 @@
            "files/images/sfrthrth.jpg",
            "files/images/SmilingInTheBusToNidaArtColony_out.png",
            "files/images/wryty7io0(1920).png"
-
-
-            // Add the filenames of your other images here
+            // Add paths to your other images here
         ];
 
-        // Get a random index to select a random image from the array
-        var randomIndex = Math.floor(Math.random() * images.length);
+        // Function to get a random index within the range of the images array length
+        function getRandomIndex() {
+            return Math.floor(Math.random() * images.length);
+        }
 
-        // Get the img element by its id
-        var imgElement = document.getElementById("randomImage");
+        // Function to set a random image
+        function setRandomImage() {
+            var randomIndex = getRandomIndex();
+            var randomImageSrc = images[randomIndex];
+            document.getElementById("randomImage").src = randomImageSrc;
+        }
 
-        // Set the src attribute of the img element to display the random image
-        imgElement.src = "images/" + images[randomIndex];
+        // Call the function to set a random image when the page loads
+        setRandomImage();
     </script>
 </body>
 </html>
