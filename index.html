@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Random Image</title>
 </head>
 <body>
-    <img src="files/images/02.png">
+    <h1>Welcome</h1>
+    <img id="randomImage" src="" alt="Random Image">
+    
+    <script>
+        // Array containing the filenames of your images
+        var images = [
+           "02.png",
+           "hsrsfrthsrth.png",
+           "IMG_20161101_113139.jpg",
+           "nee (BIG).png",
+           "sfrthrth.jpg",
+           "SmilingInTheBusToNidaArtColony_out.png",
+           "wryty7io0(1920).png"
+
+
+            // Add the filenames of your other images here
+        ];
+
+        // Get a random index to select a random image from the array
+        var randomIndex = Math.floor(Math.random() * images.length);
+
+        // Get the img element by its id
+        var imgElement = document.getElementById("randomImage");
+
+        // Set the src attribute of the img element to display the random image
+        imgElement.src = "images/" + images[randomIndex];
+    </script>
 </body>
 </html>
