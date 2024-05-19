@@ -43,7 +43,18 @@
         function setRandomImage() {
             var randomIndex = getRandomIndex();
             var randomImageSrc = images[randomIndex];
-            document.getElementById("randomImage").src = randomImageSrc;
+            
+            // Create a new Image object to check if the image path is valid
+            var img = new Image();
+            img.onload = function() {
+                // If the image is loaded successfully, set it as the src attribute of the <img> tag
+                document.getElementById("randomImage").src = randomImageSrc;
+            };
+            img.onerror = function() {
+                // If the image fails to load, call setRandomImage() again to select another random image
+                setRandomImage();
+            };
+            img.src = randomImageSrc; // Set the src attribute of the Image object to the random image path
         }
 
         // Call the function to set a random image when the page loads
