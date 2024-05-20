@@ -64,7 +64,7 @@
             font-size: 26px;
             position: absolute;
             left: 50%;
-            top: 400%;
+            top: 430%;
             /* Adjustments to ensure text is properly positioned */
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -105,20 +105,28 @@
             // Add paths to your other images here
         ];
     
-        // Function to get a random index within the range of the images array length
-        function getRandomIndex() {
-            return Math.floor(Math.random() * images.length);
+        // Function to shuffle an array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
     
-        // Function to set a random image for the first product
-        function setRandomImage() {
-            var randomIndex = getRandomIndex();
-            var randomImageSrc = images[randomIndex];
-            document.getElementById("randomImage").src = randomImageSrc;
+        // Function to create image elements and append them to the container
+        function createImages() {
+            var shuffledImages = shuffleArray(images.slice()); // Copy and shuffle the images array
+            var container = document.getElementById("imageContainer");
+            shuffledImages.forEach(function(imageSrc) {
+                var img = document.createElement("img");
+                img.src = imageSrc;
+                container.appendChild(img);
+            });
         }
     
-        // Call the function to set a random image when the page loads
-        setRandomImage();
+        // Call the function to create and display the images when the page loads
+        createImages();
     </script>
 
 </body>
