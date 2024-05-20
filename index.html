@@ -4,19 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Split Screen Website</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        @font-face {
-            font-family: 'CustomFont';
-            src: url('customfont.woff2') format('woff2'),
-                url('customfont.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
         body, html {
             height: 100%;
             margin: 0;
-            font-family: 'CustomFont', Arial, sans-serif; /* Using the custom font */
+            font-family: Arial, sans-serif;
         }
     
         .split {
@@ -26,27 +18,26 @@
         }
     
         .left {
-            width: auto; /* Adjusted to fit the height of the text */
+            width: 10%;
             left: 0;
-            background-color: white; /* Changed to white */
+            background-color: blue;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-right: 2px solid black; /* Added border to divide left and right fields */
         }
     
         .right {
-            width: calc(100% - 200px); /* Adjusted to leave space for the sidebar */
+            width: 85%;
             right: 0;
-            background-color: white; /* Changed to white */
-            left: auto; /* Adjusted to ensure right side starts after the left sidebar */
+            background-color: pink;
+            left: 15%; /* Adjust to ensure right side starts after the left sidebar */
         }
 
         .vertical-text {
             transform: rotate(90deg);
             transform-origin: left top;
             white-space: nowrap;
-            color: black; /* Changed text color */
+            color: white;
             font-size: 20px;
             position: absolute;
             left: 50%;
@@ -65,8 +56,6 @@
     <div class="split right"></div>
 </body>
 </html>
-
-
 
 
 
