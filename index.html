@@ -24,12 +24,12 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 150px;
+            width: 100px; /* Adjust width as needed */
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
-            font-size: 24px; /* Adjust font size to match the <h1> element */
+            transform: rotate(180deg); /* Flip the sidebar */
         }
         .menu-icon {
             display: block;
@@ -37,20 +37,18 @@
             cursor: pointer;
         }
         .name {
-            transform: rotate(-90deg);
-            margin-top: 20px;
-            white-space: nowrap; /* Prevents the names from wrapping */
-            writing-mode: vertical-rl; /* Flip the text so it reads from top to bottom */
+            margin-top: 10px; /* Adjust margin top as needed */
+            font-size: 1.5em; /* Set font size to match h1 */
         }
         .container {
-            margin-left: 150px; /* Zorg ervoor dat de inhoud niet onder de zijbalk komt */
+            margin-left: 120px; /* Adjust margin left to accommodate the sidebar */
             padding: 20px;
         }
         .product {
-            /* Jouw stijl voor de producten */
+            /* Your styles for the products */
         }
         footer {
-            /* Jouw stijl voor de footer */
+            /* Your styles for the footer */
         }
     </style>
 </head>
@@ -71,7 +69,6 @@
     </div>
 
      <div class="container">
-        <h1>Rik Möhlmann</h1>
         <div class="products">
             <div class="product">
                 <img id="randomImage1" src="" alt="Still no image here?">
