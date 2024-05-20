@@ -7,6 +7,142 @@
     <title>Rik Möhlmann</title>
     <style>
         @font-face {
+            font-family: 'Rikhandfont';
+            src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
+                 url('files/fonts/Rikhandfont-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Rikhandfont', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 150px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .menu-icon {
+            display: block;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .name {
+            transform: rotate(-90deg);
+            margin-top: 20px;
+        }
+        .container {
+            margin-left: 150px; /* Zorg ervoor dat de inhoud niet onder de zijbalk komt */
+            padding: 20px;
+        }
+        .product {
+            /* Jouw stijl voor de producten */
+        }
+        footer {
+            /* Jouw stijl voor de footer */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="menu-icon">
+            <!-- Hier kun je het icoon voor het uitklapbare menu toevoegen -->
+        </div>
+        <!-- Herhaal je naam meerdere keren -->
+        <div class="name">Rik Möhlmann</div>
+        <div class="name">Rik Möhlmann</div>
+        <div class="name">Rik Möhlmann</div>
+        <div class="name">Rik Möhlmann</div>
+        <div class="name">Rik Möhlmann</div>
+        <div class="name">Rik Möhlmann</div>
+        <!-- Voeg zo veel naamherhalingen toe als nodig is om de zijbalk te vullen -->
+    </div>
+
+     <div class="container">
+        <h1>Rik Möhlmann</h1>
+        <div class="products">
+            <div class="product">
+                <img id="randomImage1" src="" alt="Still no image here?">
+                <h2>Digital Alchemy</h2>
+                <p>Rik Möhlmann utilizes computer graphics and synthetic sound with a curious and hands-on approach, exploring various aspects of metaphysics and their practical applications like found in classical yoga, esotericism and mysticism. His work is characterized by direct encounters with digital media, transforming abstract concepts into sounds, images, and installations. Recurring in Möhlmann's work are his 'phone paintings' - a collection of quick gestures made on smartphone apps that often evolve into more intricate installations, performances, digital spaces, or game environments. Through a meditative lens, a continual process of liberation is practiced within the hypnotic spheres of digital tools and their archetypes. In Möhlmann's work, technology is contemplated upon as an extension of the mind-body complex, becoming a playful vehicle for exploring consciousness and its intertwining with digital media in contemporary life.</p>
+            </div>
+            <div class="product">
+                <img id="randomImage2" src="" alt="Ik zie nog steeds geen plaatje hoor!">
+                <h2>Digitale Alchemie</h2>
+                <p>Rik Möhlmann maakt gebruik van computergraphics en synthetisch geluid met een nieuwsgierige en hands-on benadering, waarbij hij verschillende aspecten van de metafysica en hun praktische toepassingen verkent, zoals gevonden in klassieke yoga, esoterie en mystiek. Zijn werk wordt gekenmerkt door directe ontmoetingen met digitale media, waarbij abstracte concepten worden getransformeerd in geluiden, beelden en installaties. Terugkerend in Möhlmanns werk zijn zijn 'phone paintings' - een verzameling snelle gebaren gemaakt op smartphone-apps die vaak evolueren tot meer complexe installaties, performances, digitale ruimtes of spelomgevingen. Door een meditatieve lens wordt een voortdurend proces van bevrijding geoefend binnen de hypnotiserende sferen van digitale tools en hun archetypes. In Möhlmanns werk wordt technologie beschouwd als een verlengstuk van het lichaam-geest complex, en wordt het een speels voertuig voor het verkennen van bewustzijn en de verwevenheid ervan met digitale media in het hedendaagse leven.</p>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </div>
+   
+
+    <!-- JavaScript om het uitklapbare menu te laten werken, indien nodig -->
+
+
+    <script>
+        // Array containing file names of images
+        var images = [
+            "files/images/x02.png",
+            "files/images/errwekugwer.png",
+            "files/images/hsrsfrthsrth.png",
+            "files/images/IMG_20161101_113139.jpg",
+            "files/images/sfrthrth.jpg",
+            "files/images/SmilingInTheBusToNidaArtColony_out.png",
+            "files/images/wryty7io0(1920).png"
+            // Add paths to your other images here
+        ];
+
+        // Function to get a random index within the range of the images array length
+        function getRandomIndex() {
+            return Math.floor(Math.random() * images.length);
+        }
+
+        // Function to set a random image for the first product
+        function setRandomImage1() {
+            var randomIndex = getRandomIndex();
+            var randomImageSrc = images[randomIndex];
+            document.getElementById("randomImage1").src = randomImageSrc;
+        }
+
+        // Function to set a random image for the second product
+            function setRandomImage2() {
+            var randomIndex = getRandomIndex();
+            var randomImageSrc = images[randomIndex];
+            document.getElementById("randomImage2").src = randomImageSrc;
+        }
+
+        // Call the function to set a random image when the page loads
+        setRandomImage1();
+        setRandomImage2();
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rik Möhlmann</title>
+    <style>
+        @font-face {
         font-family: 'Rikhandfont';
         src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
          url('files/fonts/Rikhandfont-Regular.woff') format('woff');
@@ -91,7 +227,7 @@
                 <h2>Digitale Alchemie</h2>
                 <p>Rik Möhlmann maakt gebruik van computergraphics en synthetisch geluid met een nieuwsgierige en hands-on benadering, waarbij hij verschillende aspecten van de metafysica en hun praktische toepassingen verkent, zoals gevonden in klassieke yoga, esoterie en mystiek. Zijn werk wordt gekenmerkt door directe ontmoetingen met digitale media, waarbij abstracte concepten worden getransformeerd in geluiden, beelden en installaties. Terugkerend in Möhlmanns werk zijn zijn 'phone paintings' - een verzameling snelle gebaren gemaakt op smartphone-apps die vaak evolueren tot meer complexe installaties, performances, digitale ruimtes of spelomgevingen. Door een meditatieve lens wordt een voortdurend proces van bevrijding geoefend binnen de hypnotiserende sferen van digitale tools en hun archetypes. In Möhlmanns werk wordt technologie beschouwd als een verlengstuk van het lichaam-geest complex, en wordt het een speels voertuig voor het verkennen van bewustzijn en de verwevenheid ervan met digitale media in het hedendaagse leven.</p>
             </div>
-            <!-- Add more products as needed -->
+            
         </div>
     </div>
 
@@ -140,74 +276,4 @@
 </body>
 </html>
 
-
-
-
-<!-- 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Image</title>
-    <style>
-        /* Optional: Add CSS styling to center the image */
-        body, html {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
-        img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
-</head>
-<body>
-    <img id="randomImage" src="" alt="Random Image">
-    <script>
-        // Array containing file names of images
-        var images = [
-           "files/images/02.png",
-           "files/images/hsrsfrthsrth.png",
-           "files/images/IMG_20161101_113139.jpg",
-           "files/images/errwekugwer.png",
-           "files/images/sfrthrth.jpg",
-           "files/images/SmilingInTheBusToNidaArtColony_out.png",
-           "files/images/wryty7io0(1920).png"
-            // Add paths to your other images here
-        ];
-
-        // Function to get a random index within the range of the images array length
-        function getRandomIndex() {
-            return Math.floor(Math.random() * images.length);
-        }
-
-        // Function to set a random image
-        function setRandomImage() {
-            var randomIndex = getRandomIndex();
-            var randomImageSrc = images[randomIndex];
-            
-            // Create a new Image object to check if the image path is valid
-            var img = new Image();
-            img.onload = function() {
-                // If the image is loaded successfully, set it as the src attribute of the <img> tag
-                document.getElementById("randomImage").src = randomImageSrc;
-            };
-            img.onerror = function() {
-                // If the image fails to load, call setRandomImage() again to select another random image
-                setRandomImage();
-            };
-            img.src = randomImageSrc; // Set the src attribute of the Image object to the random image path
-        }
-
-        // Call the function to set a random image when the page loads
-        setRandomImage();
-    </script>
-</body>
-</html>
-
- --> 
+-->
