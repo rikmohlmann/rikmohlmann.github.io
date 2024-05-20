@@ -54,7 +54,7 @@
             font-size: 20px;
             position: absolute;
             left: 50%;
-            top: 500%;
+            top: 100%;
             /* Adjustments to ensure text is properly positioned */
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -74,8 +74,43 @@
     <div class="split left">
         <div class="vertical-text" id="verticalText">Rik Möhlmann utilizes computer graphics and synthetic sound with a hands-on approach, exploring various aspects of metaphysics and their practical applications. Direct encounters with digital media transform abstract concepts into sounds, images, installations, phone paintings, performances, digital spaces and game environments. Through a meditative lens, a continual process of liberation is practiced within the hypnotic spheres of digital tools and their archetypes. In Möhlmann's work, technology is contemplated upon as an extension of the mind-body complex, becoming a playful vehicle for exploring consciousness and its intertwining with digital media in contemporary life.</div>
     </div>
-    <div class="split right"></div>
+    <div class="split right">
+        <div class="container">
+            <img id="randomImage" src="" alt="Still no image here?">
+        </div>
+    </div>
+
     <div class="divider"></div> <!-- Divider element -->
+
+    <script>
+        // Array containing file names of images
+        var images = [
+            "files/images/x02.png",
+            "files/images/errwekugwer.png",
+            "files/images/hsrsfrthsrth.png",
+            "files/images/IMG_20161101_113139.jpg",
+            "files/images/sfrthrth.jpg",
+            "files/images/SmilingInTheBusToNidaArtColony_out.png",
+            "files/images/wryty7io0(1920).png"
+            // Add paths to your other images here
+        ];
+    
+        // Function to get a random index within the range of the images array length
+        function getRandomIndex() {
+            return Math.floor(Math.random() * images.length);
+        }
+    
+        // Function to set a random image for the first product
+        function setRandomImage() {
+            var randomIndex = getRandomIndex();
+            var randomImageSrc = images[randomIndex];
+            document.getElementById("randomImage").src = randomImageSrc;
+        }
+    
+        // Call the function to set a random image when the page loads
+        setRandomImage();
+    </script>
+
 </body>
 </html>
 
