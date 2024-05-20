@@ -34,24 +34,24 @@
         }
 
         .vertical-text {
-            writing-mode: vertical-rl;
-            text-orientation: upright;
+            transform: rotate(90deg);
+            transform-origin: left top;
+            white-space: nowrap;
             color: white;
             font-size: 20px;
-            text-align: center;
-            line-height: 1.5; /* Adjust line height to control spacing */
+            writing-mode: vertical-rl;
+            text-orientation: upright;
         }
     </style>
 </head>
 <body>
     <div class="split left">
-        <div class="vertical-text">
-            rik mohlmann&nbsp;&nbsp;rik mohlmann&nbsp;&nbsp;rik mohlmann&nbsp;&nbsp;rik mohlmann&nbsp;&nbsp;rik mohlmann&nbsp;&nbsp;rik mohlmann&nbsp;&nbsp;rik mohlmann&nbsp;&nbsp;
-        </div>
+        <div class="vertical-text">rik mohlmann   rik mohlmann   rik mohlmann   rik mohlmann   rik mohlmann   rik mohlmann</div>
     </div>
     <div class="split right"></div>
 </body>
 </html>
+
 
 
 
