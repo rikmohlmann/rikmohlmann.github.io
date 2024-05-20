@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,7 @@
             left: 0;
             background-color: blue;
             display: flex;
+            flex-direction: column; /* Stack text vertically */
             align-items: center;
             justify-content: center;
         }
@@ -39,20 +40,15 @@
             white-space: nowrap;
             color: white;
             font-size: 20px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
             /* Adjustments to ensure text is properly positioned */
             writing-mode: vertical-rl;
             text-orientation: mixed;
-            transform: translate(-50%, -50%);
+            margin-top: 10px; /* Add margin between instances of text */
         }
     </style>
 </head>
 <body>
     <div class="split left">
-        <div class="vertical-text">rik mohlmann</div>
-        <div class="vertical-text">rik mohlmann</div>
         <div class="vertical-text">rik mohlmann</div>
         <div class="vertical-text">rik mohlmann</div>
         <div class="vertical-text">rik mohlmann</div>
