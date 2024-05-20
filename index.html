@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Split Screen Website</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body, html {
             height: 100%;
@@ -14,25 +13,41 @@
     
         .split {
             position: fixed;
-            width: 50%;
             height: 100%;
             top: 0;
         }
     
         .left {
+            width: 15%;
             left: 0;
             background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     
         .right {
+            width: 85%;
             right: 0;
             background-color: pink;
+            left: 15%; /* Adjust to ensure right side starts after the left sidebar */
+        }
+
+        .vertical-text {
+            transform: rotate(-90deg);
+            transform-origin: left top;
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="split left"></div>
+    <div class="split left">
+        <div class="vertical-text">Vertical Text</div>
+    </div>
     <div class="split right"></div>
 </body>
 </html>
+
 
