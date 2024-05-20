@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Split Screen Website</title>
     <style>
-        @font-face {
-            font-family: 'CustomFont';
-            src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
-                url('files/fonts/Rikhandfont-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'CustomFont', Arial, sans-serif; /* Appoint custom font */
-        }
         body, html {
             height: 100%;
             margin: 0;
@@ -29,36 +16,28 @@
             height: 100%;
             top: 0;
         }
-
+    
         .left {
-            width: auto; /* Adjusted to fit the height of the text */
+            width: 10%;
             left: 0;
-            background-color: white; /* Changed to white background */
+            background-color: blue;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
+    
         .right {
-            width: calc(100% - 200px); /* Adjusted to leave space for the sidebar */
+            width: 85%;
             right: 0;
-            background-color: white; /* Changed to white background */
-            left: auto; /* Adjusted to ensure right side starts after the left sidebar */
+            background-color: pink;
+            left: 15%; /* Adjust to ensure right side starts after the left sidebar */
         }
-        .divider {
-            position: fixed;
-            width: 2px;
-            height: 100%;
-            background-color: rgb(0, 0, 0);
-            left: 15%; /* Position it at the end of the left sidebar */
-        }
-
 
         .vertical-text {
             transform: rotate(90deg);
             transform-origin: left top;
             white-space: nowrap;
-            color: rgb(0, 0, 0);
+            color: white;
             font-size: 20px;
             position: absolute;
             left: 50%;
