@@ -47,7 +47,7 @@
             font-size: 20px;
             position: absolute;
             left: 50%;
-            top: 0%;
+            top: -700%;
             /* Adjustments to ensure text is properly positioned */
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -69,12 +69,6 @@
     </div>
     <div class="split right"></div>
     <div class="divider"></div> <!-- Divider element -->
-    <script>
-        // Calculate and set the top position of the vertical text
-        var verticalText = document.getElementById('verticalText');
-        var textHeight = verticalText.getBoundingClientRect().height;
-        verticalText.style.top = -textHeight / 2 + 'px';
-    </script>
 </body>
 </html>
 
