@@ -6,58 +6,60 @@
     <title>Rik Möhlmann</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        * {
+     * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-        }
+}
 
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
 
-        .container {
-            display: grid;
-            grid-template-columns: 10% 1px 90%;
-            height: 100vh;
-            position: relative;
-        }
+.container {
+    display: grid;
+    grid-template-columns: 10% 1px 90%;
+    height: 100vh;
+}
 
-        .left {
-         background-color: rgb(255, 255, 255);
-         position: relative;
-        }
+.left {
+    background-color: lightgrey;
+    position: relative;
+}
 
-        .divider {
-            background-color: black;
-            width: 1px;
-        }
+.divider {
+    background-color: black;
+    width: 1px;
+}
 
-        .right {
-            background-color: white;
-        }
+.right {
+    background-color: white;
+}
 
-        .vertical-text {
-            transform: rotate(90deg);
-            transform-origin: left top;
-            white-space: nowrap;
-            color: rgb(0, 0, 0);
-            font-size: 26px;
-            position: absolute;
-            left: 50%;
-            top: -500%;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            transform: translate(-50%, -50%);
-            padding: 10px; /* Ensure some space around the text */
-        }
+.vertical-text {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: translate(0, -50%);
+    padding: 10px; /* Ensure some space around the text */
+    max-width: 100%; /* Ensure it doesn't overflow */
+    overflow: hidden; /* Hide any overflow */
+}
 
-        @media (min-width: 768px) {
-            .container {
-                grid-template-columns: 3% 1px 97%;
-            }
-        }
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 3% 1px 97%;
+    }
+}
+
     </style>
 </head>
 <body>
