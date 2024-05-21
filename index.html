@@ -17,124 +17,134 @@
             margin: 0;
             font-family: 'Rikhandfont', sans-serif;
         }
-    
-        .split {
-            position: fixed;
-            height: 100%;
-            top: 0;
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
         }
-    
+
+        .left, .right {
+            overflow-y: auto;
+            background-color: rgb(255, 
+            , 255, 255);
+        }
+
         .left {
-            width: 10%;
-            left: 0;
-            background-color: rgb(255, 255, 255);
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow-y: auto; /* Enable vertical scrolling */
-        }
-    
-            .right {
-            width: 90%;
-            right: 0;
-            background-color: rgb(255, 255, 255);
-            left: 10%; /* Adjust to ensure right side starts after the left sidebar */
-            overflow-y: auto; /* Enable vertical scrolling */
+            position: relative;
         }
 
-        .container {
-            width: 100%; /* Ensure the container takes up the full width of the right field */
-        }
-
-        .container img {
-            max-width: 100%; /* Ensure the image fits within the width of its container */
-            height: auto; /* Preserve the aspect ratio of the image */
-        }
-
-       
-        ::-webkit-scrollbar {
-            display: none;
+        .right {
+            flex: 9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .vertical-text {
-            transform: rotate(90deg);
-            transform-origin: left top;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
             white-space: nowrap;
             color: rgb(0, 0, 0);
             font-size: 26px;
             position: absolute;
             left: 50%;
-            top: 418%;
-            /* Adjustments to ensure text is properly positioned */
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
             transform: translate(-50%, -50%);
         }
 
+        .right .container img {
+            max-width: 100%;
+            height: auto;
+        }
+
         .divider {
-            position: fixed;
             width: 2px;
-            height: 100%;
             background-color: rgb(0, 0, 0);
-            left: 10%; /* Position it at the end of the left sidebar */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left {
+                width: 100%;
+                height: 10%;
+                position: static;
+                text-align: center;
+            }
+
+            .right {
+                width: 100%;
+                height: 90%;
+            }
+
+            .vertical-text {
+                transform: none;
+                position: static;
+                font-size: 18px;
+                writing-mode: horizontal-tb;
+            }
+
+            .divider {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="split left">
-        <div class="vertical-text" id="verticalText">Rik Möhlmann ---> utilizing computer graphics and synthetic sound with a hands-on approach ---> exploring various aspects of metaphysics and their practical applications ---> translating abstract concepts into sounds, images, installations, phone paintings, performances, digital spaces, game environments and musical compositions ---> practicing a continual process of liberation within the hypnotic spheres of digital tools and their archetypes ---> contemplating upon technoligy as an extension of the mind-body complex and a playful vehicle for exploring consciousness <--- </div>
-    </div>
-    <div class="split right">
-        <div class="container" id="imageContainer"></div>
-    </div>
-
-    <div class="divider"></div> <!-- Divider element -->
-
-    <script>
-        // Array containing file names of images
-        var images = [
-            "files/images/x02.png",
-            "files/images/errwekugwer.png",
-            "files/images/hsrsfrthsrth.png",
-            "files/images/IMG_20161101_113139.jpg",
-            "files/images/sfrthrth.jpg",
-            "files/images/SmilingInTheBusToNidaArtColony_out.png",
-            "files/images/wryty7io0(1920).png"
-            // Add paths to your other images here
-        ];
+    <div class="container">
+        <div class="left">
+            <div class="vertical-text" id="verticalText">Rik Möhlmann utilizes computer graphics and synthetic sound with a hands-on approach, exploring various aspects of metaphysics and their practical applications / Direct encounters with digital media transform abstract concepts into sounds, images, installations, phone paintings, performances, digital spaces and game environments / Through a meditative lens, a continual process of liberation is practiced within the hypnotic spheres of digital tools and their archetypes
+                / In Möhlmann's work, technology is contemplated upon as an extension of the mind-body complex, becoming a playful vehicle for exploring consciousness and its intertwining with digital media in contemporary life.</div>
+            </div>
+            <div class="divider"></div>
+            <div class="right">
+                <div class="container" id="imageContainer"></div>
+            </div>
+        </div>
     
-        // Function to shuffle an array
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
+        <script>
+            // Array containing file names of images
+            var images = [
+                "files/images/x02.png",
+                "files/images/errwekugwer.png",
+                "files/images/hsrsfrthsrth.png",
+                "files/images/IMG_20161101_113139.jpg",
+                "files/images/sfrthrth.jpg",
+                "files/images/SmilingInTheBusToNidaArtColony_out.png",
+                "files/images/wryty7io0(1920).png"
+                // Add paths to your other images here
+            ];
+    
+            // Function to shuffle an array
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
             }
-            return array;
-        }
     
-        // Function to create image elements and append them to the container
-        function createImages() {
-            var shuffledImages = shuffleArray(images.slice()); // Copy and shuffle the images array
-            var container = document.getElementById("imageContainer");
-            shuffledImages.forEach(function(imageSrc) {
-                var img = document.createElement("img");
-                img.src = imageSrc;
-                container.appendChild(img);
-            });
-        }
+            // Function to create image elements and append them to the container
+            function createImages() {
+                var shuffledImages = shuffleArray(images.slice()); // Copy and shuffle the images array
+                var container = document.getElementById("imageContainer");
+                shuffledImages.forEach(function(imageSrc) {
+                    var img = document.createElement("img");
+                    img.src = imageSrc;
+                    container.appendChild(img);
+                });
+            }
     
-        // Call the function to create and display the images when the page loads
-        createImages();
-    </script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
+            // Call the function to create and display the images when the page loads
+            createImages();
+        </script>
+    </body>
+    </html>
+    
