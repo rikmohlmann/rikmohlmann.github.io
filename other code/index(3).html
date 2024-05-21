@@ -4,100 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rik Möhlmann</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        @font-face {
-            font-family: 'Rikhandfont';
-            src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
-                 url('files/fonts/Rikhandfont-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
         }
+
         body, html {
             height: 100%;
-            margin: 0;
-            font-family: 'Rikhandfont', sans-serif;
-        }
-    
-        .split {
-            position: fixed;
-            height: 100%;
-            top: 0;
-        }
-    
-        .left {
-            width: 10%;
-            min-width: 100px; /* Ensure left field is visible on larger screens */
-            left: 0;
-            background-color: rgb(255, 255, 255);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow-y: auto; /* Enable vertical scrolling */
-        }
-    
-        .right {
-            width: 90%;
-            right: 0;
-            background-color: rgb(255, 255, 255);
-            left: 10%; /* Adjust to ensure right side starts after the left sidebar */
-            overflow-y: auto; /* Enable vertical scrolling */
+            font-family: Arial, sans-serif;
         }
 
         .container {
-            width: 100%; /* Ensure the container takes up the full width of the right field */
+            display: grid;
+            grid-template-columns: 10% 1px 90%;
+            height: 100vh;
+            position: relative;
         }
 
-        .container img {
-            max-width: 100%; /* Ensure the image fits within the width of its container */
-            height: auto; /* Preserve the aspect ratio of the image */
+        .left {
+         background-color: rgb(255, 255, 255);
+         position: relative;
         }
 
-        ::-webkit-scrollbar {
-            display: none;
+        .divider {
+            background-color: black;
+            width: 1px;
+        }
+
+        .right {
+            background-color: white;
         }
 
         .vertical-text {
             transform: rotate(90deg);
             transform-origin: left top;
-            white-space: nowrap;
-            color: rgb(0, 0, 0);
-            font-size: 26px;
+         white-space: nowrap;
+         color: rgb(0, 0, 0);
+         font-size: 26px;
             position: absolute;
-            left: 50%;
-            top: 50%; /* Adjusted to ensure text is properly positioned */
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
+         left: 50%;
+         top: 50%;
+         writing-mode: vertical-rl;
+         text-orientation: mixed;
             transform: translate(-50%, -50%);
+         padding: 10px; /* Ensure some space around the text */
         }
 
-        .divider {
-            position: fixed;
-            width: 2px;
-            height: 100%;
-            background-color: rgb(0, 0, 0);
-            left: 10%; /* Position it at the end of the left sidebar */
-        }
-
-        @media screen and (min-width: 1024px) {
-            .left {
-                width: 15%;
-                min-width: 150px; /* Ensure left field is visible on even larger screens */
-            }
-            .right {
-                width: 85%;
-                left: 15%; /* Adjust to ensure right side starts after the left sidebar */
-            }
-            .vertical-text {
-                font-size: 20px; /* Adjust font size for larger screens */
-                top: 50%; /* Adjust top position for larger screens */
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 3% 1px 97%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="split left">
-        <div class="vertical-text" id="verticalText">Rik Möhlmann ---> utilizing computer graphics and synthetic sound with a hands-on approach ---> exploring various aspects of metaphysics and their practical applications ---> translating abstract concepts into sounds, images, installations, phone paintings, performances, digital spaces, game environments and musical compositions ---> practicing a continual process of liberation within the hypnotic spheres of digital tools and their archetypes ---> contemplating upon technoligy as an extension of the mind-body complex and a playful vehicle for exploring consciousness <--- </div>
+    <div class="container">
+        <div class="left">
+            <div class="vertical-text">Rik Möhlmann ---> utilizing computer graphics and synthetic sound with a hands-on approach ---> exploring various aspects of metaphysics and their practical applications ---> translating abstract concepts into sounds, images, installations, phone paintings, performances, digital spaces, game environments and musical compositions ---> practicing a continual process of liberation within the hypnotic spheres of digital tools and their archetypes ---> contemplating upon technoligy as an extension of the mind-body complex and a playful vehicle for exploring consciousness</div>
+        </div>
+        <div class="divider"></div>
+        <div class="right"></div>
     </div>
+</body>
+</html>
    
 
 
