@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rik Möhlmann</title>
+    <title>Responsive Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
@@ -24,7 +24,8 @@
         }
 
         .left {
-            background-color: rgb(255, 255, 255);
+            background-color: lightgrey;
+            position: relative;
         }
 
         .divider {
@@ -33,19 +34,33 @@
         }
 
         .right {
-            background-color: rgb(255, 255, 255);
+            background-color: white;
+        }
+
+        .vertical-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: rotate(90deg) translate(-50%, -50%);
+            transform-origin: center;
+            white-space: nowrap;
+            color: rgb(0, 0, 0);
+            font-size: 26px;
+            padding: 10px;
         }
 
         @media (min-width: 768px) {
             .container {
-             grid-template-columns: 3% 1px 97%;
+                grid-template-columns: 3% 1px 97%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left"></div>
+        <div class="left">
+            <div class="vertical-text">Your Vertical Text Here</div>
+        </div>
         <div class="divider"></div>
         <div class="right"></div>
     </div>
