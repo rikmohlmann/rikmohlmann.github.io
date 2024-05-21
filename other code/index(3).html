@@ -6,7 +6,7 @@
     <title>Responsive Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        * {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,20 +38,15 @@ body, html {
 }
 
 .vertical-text {
-    transform: rotate(90deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(90deg) translate(-50%, -50%);
     transform-origin: left top;
     white-space: nowrap;
     color: rgb(0, 0, 0);
     font-size: 26px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: translate(0, -50%);
     padding: 10px; /* Ensure some space around the text */
-    max-width: 100%; /* Ensure it doesn't overflow */
-    overflow: hidden; /* Hide any overflow */
 }
 
 @media (min-width: 768px) {
