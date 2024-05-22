@@ -81,8 +81,7 @@ body, html {
     background-repeat: no-repeat;
     border: none; /* Remove the border */
     cursor: pointer; 
-    outline: none !important; /* Remove the blue outline */
-    
+    outline: none; /* Remove the blue outline */
 }
 
 .fixed-button:focus {
