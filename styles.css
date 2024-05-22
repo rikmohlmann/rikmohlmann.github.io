@@ -57,8 +57,7 @@ body, html {
     color: rgb(0, 0, 0);
     font-size: 30px; /* Adjust as needed */
     padding: 10px; /* Ensure some space around the text */
-    mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 4%, rgba(0, 0, 0, 0) 7%);
-    -webkit-mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 4%, rgba(0, 0, 0, 0) 7%); /* For Webkit browsers */
+
 }
 
 .non-rotated {
