@@ -76,6 +76,20 @@ body, html {
             display: inline-block;
         }
 
+        .fixed-button {
+    position: fixed;
+    top: 20%; /* Adjust as needed */
+    left: 5%; /* Adjust as needed */
+    z-index: 1; /* Ensure button stays above other content */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 @media (min-width: 768px) {
     .container {
         grid-template-columns: 2% 1px 98%;
@@ -84,6 +98,11 @@ body, html {
     .vertical-text {
         font-size: 44px; /* Adjust as needed */
     }
+
+    .fixed-button {
+        top: 30%; /* Adjust as needed */
+        left: 10%; /* Adjust as needed */
+    }
 }
 
     </style>
@@ -91,7 +110,9 @@ body, html {
 <body>
     <div class="container">
         <div class="left">
-            <div class="vertical-text">Rik Möhlmann ---<span class="non-rotated">v</span> utilizing computer graphics and synthetic sound with a hands-on approach ---<span class="non-rotated">v</span> exploring various aspects of metaphysics and their practical applications ---<span class="non-rotated">v</span> translating abstract concepts into sounds, images, installations, phone paintings, performances, digital spaces, game environments, musical compositions ---<span class="non-rotated">v</span> practicing a continual process of liberation within the hypnotic spheres of digital tools and their archetypes ---<span class="non-rotated">v</span> contemplating upon technoligy as an extension of the mind-body complex and a playful vehicle for exploring consciousness <span class="double-rotated">v</span>--- </div>
+            <div class="vertical-text">Rik Möhlmann ---<span class="non-rotated">v</span> utilizing computer graphics and synthetic sound with a hands-on approach ---<span class="non-rotated">v</span> exploring various aspects of metaphysics and their practical applications ---<span class="non-rotated">v</span> translating abstract concepts into sounds, images, installations, phone paintings, performances, digital spaces, game environments, musical compositions ---<span class="non-rotated">v</span> practicing a continual process of liberation within the hypnotic spheres of digital tools and their archetypes ---<span class="non-rotated">v</span> contemplating upon technoligy as an extension of the mind-body complex and a playful vehicle for exploring consciousness <span class="double-rotated">v</span>--- 
+                <button class="fixed-button">Click me!</button> <!-- Button added here -->
+            </div>
         </div>
         <div class="divider"></div>
         <div class="right"></div>
