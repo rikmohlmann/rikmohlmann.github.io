@@ -11,12 +11,12 @@ Stream mapping:
   Stream #1:0 (png) -> paletteuse
   paletteuse:default -> Stream #0:0 (gif)
 Press [q] to stop, [?] for help
-[image2 @ 0000020eed1daf40] Thread message queue blocking; consider raising the thread_queue_size option (current value: 8)
+[image2 @ 00000147f023af40] Thread message queue blocking; consider raising the thread_queue_size option (current value: 8)
 Output #0, gif, to 'C:/Dev/Website/rikmohlmann.github.io/files/icons/flag_stripe.gif':
   Metadata:
     encoder         : Lavf60.4.101
   Stream #0:0: Video: gif, pal8(pc, gbr/unknown/unknown, progressive), 64x64 [SAR 1:1 DAR 1:1], q=2-31, 200 kb/s, 24 fps, 100 tbn
     Metadata:
       encoder         : Lavc60.9.100 gif
-frame=    0 fps=0.0 q=-0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   19 fps=0.0 q=-0.0 Lsize=      11kB time=00:00:00.75 bitrate= 118.3kbits/s speed=13.7x    
+frame=    0 fps=0.0 q=-0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   19 fps=0.0 q=-0.0 Lsize=      11kB time=00:00:00.75 bitrate= 118.3kbits/s speed=13.3x    
 video:11kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.180701%
