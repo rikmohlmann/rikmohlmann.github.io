@@ -21,6 +21,7 @@
 
     <!-- JavaScript to handle icon toggling -->
     <script>
+        this.blur(); // Remove focus from the button
         const toggleButton = document.getElementById('toggleButton');
         let isIcon1 = true;
 
@@ -31,6 +32,7 @@
             } else {
                 this.style.backgroundImage = 'url("files/icons/stripes.png")';
             }
+            
             isIcon1 = !isIcon1;
         });
 </script>
