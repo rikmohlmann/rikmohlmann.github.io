@@ -93,7 +93,7 @@ outline: none !important; /* Remove the blue outline */
 .fixed-button-home {
     position: fixed;
     top: 0%; /* Adjust as needed */
-    left: 0.5%; /* Adjust as needed */
+    left: 0.7%; /* Adjust as needed */
     z-index: 1; /* Ensure button stays above other content */
     font-family: Rikhandfont3, sans-serif;
     font-size: 30px; /* Adjust as needed */
@@ -101,7 +101,7 @@ outline: none !important; /* Remove the blue outline */
     transform-origin: top left;
     white-space: nowrap;
     width: 27px;
-    height: 111px;
+    height: 123px;
     background-color: rgb(17, 153, 69); /* Set the background color to blue */
     color: rgb(0, 0, 0); /* Set the text color to white */
     border: none; /* Remove the border */
