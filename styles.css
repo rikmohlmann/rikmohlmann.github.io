@@ -54,7 +54,7 @@ body, html {
     transform: rotate(90deg) translateY(-50%);
     transform-origin: top left;
     white-space: nowrap;
-    color: rgb(0, 0, 0);
+    color: rgb(146, 139, 1);
     font-size: 30px; /* Adjust as needed */
     padding: 10px; /* Ensure some space around the text */
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%);
