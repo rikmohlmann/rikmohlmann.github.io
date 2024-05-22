@@ -1,11 +1,11 @@
+@font-face {
+    font-family: 'Rikhandfont';
+    src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
+         url('files/fonts/Rikhandfont-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-        @font-face {
-            font-family: 'Rikhandfont';
-            src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
-                 url('files/fonts/Rikhandfont-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
 body, html {
     height: 100%;
     font-family: Rikhandfont, sans-serif;
@@ -38,7 +38,7 @@ body, html {
 
 .right {
     background-color: rgb(255, 255, 255);
-    overflow: auto; /* Make left field scrollable */
+    overflow: auto; /* Make right field scrollable */
     scrollbar-width: none; /* For Firefox */
     user-select: none; /* Disable text selection for the whole page */
 }
@@ -57,19 +57,21 @@ body, html {
     color: rgb(0, 0, 0);
     font-size: 30px; /* Adjust as needed */
     padding: 10px; /* Ensure some space around the text */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%);
 }
 
 .non-rotated {
-            transform: rotate(-90deg); /* Rotate back to normal */
-            display: inline-block;
-        }
+    transform: rotate(-90deg); /* Rotate back to normal */
+    display: inline-block;
+}
 
-        .double-rotated {
-            transform: rotate(90deg); /* Rotate back to normal */
-            display: inline-block;
-        }
+.double-rotated {
+    transform: rotate(90deg); /* Rotate back to normal */
+    display: inline-block;
+}
 
-        .fixed-button {
+.fixed-button {
     position: fixed;
     top: 2%; /* Adjust as needed */
     left: 2%; /* Adjust as needed */
@@ -87,7 +89,6 @@ body, html {
 .fixed-button:focus {
     outline: none; /* Remove the blue outline when focused */
 }
-
 
 @media (min-width: 768px) {
     .container {
