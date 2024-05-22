@@ -81,7 +81,7 @@ body, html {
     background-repeat: no-repeat;
     border: none; /* Remove the border */
     cursor: pointer; 
-    outline: none; /* Remove the blue outline */
+    outline: none !important; /* Remove the blue outline */
     transition: background-image 0.3s ease; /* Add transition for background image */
 }
 
@@ -102,6 +102,6 @@ body, html {
     .fixed-button {
         top: 1%; /* Adjust as needed */
         left: 0.5%; /* Adjust as needed */
-        font-size: 40px; /* Adjust as needed */
+        font-size: 44px; /* Adjust as needed */
     }
 }
