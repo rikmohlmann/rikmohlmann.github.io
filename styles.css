@@ -63,10 +63,10 @@ body, html {
 .gradient-overlay {
     position: fixed;
     z-index: 1; /* Ensure overlay stays above other content */
-    top: 6.6%;
+    top: 6%;
     left: 0%;
     width: 8%;
-    height: 3%;
+    height: 2.2%;
     background: linear-gradient(to bottom, rgb(35, 255, 1), rgb(255, 0, 251)); /* Adjust colors as needed */
     pointer-events: none; /* Allow clicking through the overlay */
 }
