@@ -96,7 +96,7 @@ outline: none !important; /* Remove the blue outline */
     transform-origin: top left;
     width: 27px;
     height: 222px;
-    background-color: rgb(255, 255, 255); /* Set the background color to blue */
+    background-color: rgb(144, 223, 7); /* Set the background color to blue */
     color: rgb(0, 0, 0); /* Set the text color to white */
     border: none; /* Remove the border */
     cursor: pointer; 
