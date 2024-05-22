@@ -87,8 +87,8 @@ outline: none !important; /* Remove the blue outline */
 
 .fixed-button-home {
     position: fixed;
-    top: 0%; /* Adjust as needed */
-    left: 2%; /* Adjust as needed */
+    top: 9%; /* Adjust as needed */
+    left: 9%; /* Adjust as needed */
     z-index: 2; /* Ensure button stays above other content */
     font-family: Rikhandfont, sans-serif;
     font-size: 30px; /* Adjust as needed */
