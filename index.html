@@ -29,6 +29,11 @@ body, html {
     background-color: rgb(255, 255, 255);
     position: relative;
     overflow: auto; /* Make left field scrollable */
+    scrollbar-width: none; /* For Firefox */
+}
+
+.left::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 .divider {
@@ -39,6 +44,11 @@ body, html {
 .right {
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Make left field scrollable */
+    scrollbar-width: none; /* For Firefox */
+}
+
+.right::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 .vertical-text {
