@@ -54,6 +54,12 @@ body, html {
     display: none; /* For Chrome, Safari, and Opera */
 }
 
+.left,
+.right {
+    position: absolute;
+}
+
+
 .vertical-text {
     position: absolute;
     top: 6%;
@@ -96,5 +102,59 @@ body, html {
         <div class="divider"></div>
         <div class="right"></div>
     </div>
+    ><script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const left = document.querySelector('.left');
+        const right = document.querySelector('.right');
+    
+        let isLeftDragging = false;
+        let isRightDragging = false;
+        let leftStartX, leftStartY, rightStartX, rightStartY;
+    
+        // Event listener for left field drag start
+        left.addEventListener('mousedown', function(e) {
+            isLeftDragging = true;
+            leftStartX = e.clientX - left.offsetLeft;
+            leftStartY = e.clientY - left.offsetTop;
+        });
+    
+        // Event listener for right field drag start
+        right.addEventListener('mousedown', function(e) {
+            isRightDragging = true;
+            rightStartX = e.clientX - right.offsetLeft;
+            rightStartY = e.clientY - right.offsetTop;
+        });
+    
+        // Event listener for left field drag end
+        document.addEventListener('mouseup', function() {
+            isLeftDragging = false;
+        });
+    
+        // Event listener for right field drag end
+        document.addEventListener('mouseup', function() {
+            isRightDragging = false;
+        });
+    
+        // Event listener for left field drag
+        document.addEventListener('mousemove', function(e) {
+            if (isLeftDragging) {
+                const newLeftX = e.clientX - leftStartX;
+                const newLeftY = e.clientY - leftStartY;
+                left.style.left = `${newLeftX}px`;
+                left.style.top = `${newLeftY}px`;
+            }
+        });
+    
+        // Event listener for right field drag
+        document.addEventListener('mousemove', function(e) {
+            if (isRightDragging) {
+                const newRightX = e.clientX - rightStartX;
+                const newRightY = e.clientY - rightStartY;
+                right.style.left = `${newRightX}px`;
+                right.style.top = `${newRightY}px`;
+            }
+        });
+    });
+</script>
 </body>
 </html>
