@@ -61,7 +61,8 @@ body, html {
 }
 
 .gradient-overlay {
-    position: absolute;
+    position: fixed;
+    z-index: 1; /* Ensure overlay stays above other content */
     top: 5%;
     left: 0%;
     width: 100%;
