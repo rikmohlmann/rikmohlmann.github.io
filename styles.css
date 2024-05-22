@@ -59,6 +59,19 @@ font-size: 30px; /* Adjust as needed */
 padding: 10px; /* Ensure some space around the text */
 }
 
+.vertical-name {
+    z-index: 1; /* Ensure button stays above other content */
+    position: fixed;
+    top: 5%;
+    left: 40%; /* Adjust to fit within the left column */
+    transform: rotate(90deg) translateY(-50%);
+    transform-origin: top left;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+    font-size: 30px; /* Adjust as needed */
+    padding: 10px; /* Ensure some space around the text */
+    }
+
 .non-rotated {
     transform: rotate(-90deg); /* Rotate back to normal */
     display: inline-block;
@@ -98,7 +111,7 @@ grid-template-columns: 2% 1px 98%;
 font-size: 44px; /* Adjust as needed */
 }
 
-.fixed-button {
+.fixed-button-menu {
 top: 1.9%; /* Adjust as needed */
 left: 0.7%; /* Adjust as needed */
 font-size: 50px; /* Adjust as needed */
