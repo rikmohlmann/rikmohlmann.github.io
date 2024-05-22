@@ -1,14 +1,14 @@
 
 @font-face {
-    font-family: 'Rikhandfont';
-    src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
-         url('files/fonts/Rikhandfont-Regular.woff') format('woff');
+    font-family: 'Rikhandfont2';
+    src: url('files/fonts/Rikhandfont2-Regular.woff2') format('woff2'),
+         url('files/fonts/Rikhandfont2-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 body, html {
 height: 100%;
-font-family: Rikhandfont, sans-serif;
+font-family: Rikhandfont2, sans-serif;
 overflow: hidden; /* Prevent the whole page from scrolling */
 user-select: none; /* Disable text selection for the whole page */
 }
@@ -61,13 +61,8 @@ padding: 10px; /* Ensure some space around the text */
 }
 
 
-.non-rotated {
-    transform: rotate(-90deg); /* Rotate back to normal */
-    display: inline-block;
-}
-
-.double-rotated {
-    transform: rotate(90deg); /* Rotate back to normal */
+.flipped_arrow {
+    transform: rotate(-180deg); /* Rotate back to normal */
     display: inline-block;
 }
 
@@ -88,7 +83,7 @@ outline: none !important; /* Remove the blue outline */
 
 .rotate-home-text {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -200%) rotate(90deg);
     transform-origin: center;
@@ -99,7 +94,7 @@ outline: none !important; /* Remove the blue outline */
     top: 0%; /* Adjust as needed */
     left: 0.5%; /* Adjust as needed */
     z-index: 1; /* Ensure button stays above other content */
-    font-family: Rikhandfont, sans-serif;
+    font-family: Rikhandfont2, sans-serif;
     font-size: 30px; /* Adjust as needed */
     /* transform: rotate(90deg) translateY(-50%); */
     transform-origin: top left;
@@ -134,10 +129,10 @@ font-size: 50px; /* Adjust as needed */
 
 .fixed-button-home {
     top: 0%; /* Adjust as needed */
-    left: 0.5%; /* Adjust as needed */
+    left: 0.55%; /* Adjust as needed */
     font-size: 40px; /* Adjust as needed */
-    width: 27px;
-    height: 333px;
+    width: 35px;
+    height: 280px;
     }
 
 }
