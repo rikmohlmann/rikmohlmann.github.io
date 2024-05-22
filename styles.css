@@ -82,6 +82,7 @@ body, html {
     border: none; /* Remove the border */
     cursor: pointer; 
     outline: none; /* Remove the blue outline */
+    transition: background-image 0.3s ease; /* Add transition for background image */
 }
 
 .fixed-button:focus {
