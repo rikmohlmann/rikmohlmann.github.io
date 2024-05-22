@@ -100,8 +100,8 @@ body, html {
     }
 
     .fixed-button {
-        top: 1.5%; /* Adjust as needed */
-        left: 0.7%; /* Adjust as needed */
+        top: 2%; /* Adjust as needed */
+        left: 1%; /* Adjust as needed */
         font-size: 48px; /* Adjust as needed */
     }
 }
