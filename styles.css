@@ -49,7 +49,7 @@ display: none; /* For Chrome, Safari, and Opera */
 
 .vertical-text {
 position: absolute;
-top: 6%;
+top: 24%;
 left: 40%; /* Adjust to fit within the left column */
 transform: rotate(90deg) translateY(-50%);
 transform-origin: top left;
