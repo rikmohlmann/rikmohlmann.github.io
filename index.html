@@ -16,6 +16,7 @@
 body, html {
     height: 100%;
     font-family: Rikhandfont, sans-serif;
+    overflow: hidden; /* Prevent the whole page from scrolling */
 }
 
 .container {
@@ -27,6 +28,7 @@ body, html {
 .left {
     background-color: rgb(255, 255, 255);
     position: relative;
+    overflow: auto; /* Make left field scrollable */
 }
 
 .divider {
@@ -36,6 +38,7 @@ body, html {
 
 .right {
     background-color: rgb(255, 255, 255);
+    overflow: auto; /* Make left field scrollable */
 }
 
 .vertical-text {
