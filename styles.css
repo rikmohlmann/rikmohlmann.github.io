@@ -1,107 +1,108 @@
-
-        @font-face {
-            font-family: 'Rikhandfont';
-            src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
-                 url('files/fonts/Rikhandfont-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+@font-face {
+    font-family: 'Rikhandfont';
+    src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
+         url('files/fonts/Rikhandfont-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body, html {
-    height: 100%;
-    font-family: Rikhandfont, sans-serif;
-    overflow: hidden; /* Prevent the whole page from scrolling */
-    user-select: none; /* Disable text selection for the whole page */
+height: 100%;
+font-family: Rikhandfont, sans-serif;
+overflow: hidden; /* Prevent the whole page from scrolling */
+user-select: none; /* Disable text selection for the whole page */
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 7% 1px 93%;
-    height: 100vh;
+display: grid;
+grid-template-columns: 7% 1px 93%;
+height: 100vh;
 }
 
 .left {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 4%, rgba(255, 255, 255, 0) 7%);
-    position: relative;
-    overflow: auto; /* Make left field scrollable */
-    scrollbar-width: none; /* For Firefox */
-    user-select: none; /* Disable text selection for the whole page */
+background-color: rgb(255, 255, 255);
+position: relative;
+overflow: auto; /* Make left field scrollable */
+scrollbar-width: none; /* For Firefox */
+user-select: none; /* Disable text selection for the whole page */
 }
 
 .left::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+display: none; /* For Chrome, Safari, and Opera */
 }
 
 .divider {
-    background-color: rgb(255, 255, 255);
-    width: 1px;
+background-color: rgb(255, 255, 255);
+width: 1px;
 }
 
 .right {
-    background-color: rgb(255, 255, 255);
-    overflow: auto; /* Make left field scrollable */
-    scrollbar-width: none; /* For Firefox */
-    user-select: none; /* Disable text selection for the whole page */
+background-color: rgb(255, 255, 255);
+overflow: auto; /* Make right field scrollable */
+scrollbar-width: none; /* For Firefox */
+user-select: none; /* Disable text selection for the whole page */
 }
 
 .right::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+display: none; /* For Chrome, Safari, and Opera */
 }
 
-
 .vertical-text {
-    position: absolute;
-    top: 6%;
-    left: 40%; /* Adjust to fit within the left column */
-    transform: rotate(90deg) translateY(-50%);
-    transform-origin: top left;
-    white-space: nowrap;
-    color: rgb(0, 0, 0);
-    font-size: 30px; /* Adjust as needed */
-    padding: 10px; /* Ensure some space around the text */
+position: absolute;
+top: 6%;
+left: 40%; /* Adjust to fit within the left column */
+transform: rotate(90deg) translateY(-50%);
+transform-origin: top left;
+white-space: nowrap;
+color: rgb(0, 0, 0);
+font-size: 30px; /* Adjust as needed */
+padding: 10px; /* Ensure some space around the text */
+background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 4%, rgba(255, 255, 255, 0) 7%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .non-rotated {
-            transform: rotate(-90deg); /* Rotate back to normal */
-            display: inline-block;
-        }
+transform: rotate(-90deg); /* Rotate back to normal */
+display: inline-block;
+}
 
-        .double-rotated {
-            transform: rotate(90deg); /* Rotate back to normal */
-            display: inline-block;
-        }
+.double-rotated {
+transform: rotate(90deg); /* Rotate back to normal */
+display: inline-block;
+}
 
-        .fixed-button {
-    position: fixed;
-    top: 2%; /* Adjust as needed */
-    left: 2%; /* Adjust as needed */
-    z-index: 1; /* Ensure button stays above other content */
-    width: 27px;
-    height: 27px;
-    background-image: url('files/icons/stripes.png'); /* Replace 'your-icon.png' with the path to your PNG image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: none; /* Remove the border */
-    cursor: pointer; 
-    outline: none; /* Remove the blue outline */
+.fixed-button {
+position: fixed;
+top: 2%; /* Adjust as needed */
+left: 2%; /* Adjust as needed */
+z-index: 1; /* Ensure button stays above other content */
+width: 27px;
+height: 27px;
+background-image: url('files/icons/stripes.png'); /* Replace 'your-icon.png' with the path to your PNG image */
+background-size: cover;
+background-repeat: no-repeat;
+border: none; /* Remove the border */
+cursor: pointer; 
+outline: none !important; /* Remove the blue outline */
+transition: background-image 0.3s ease; /* Add transition for background image */
 }
 
 .fixed-button:focus {
-    outline: none; /* Remove the blue outline when focused */
+outline: none; /* Remove the blue outline when focused */
 }
 
-
 @media (min-width: 768px) {
-    .container {
-        grid-template-columns: 2% 1px 98%;
-    }
+.container {
+grid-template-columns: 2% 1px 98%;
+}
 
-    .vertical-text {
-        font-size: 44px; /* Adjust as needed */
-    }
+.vertical-text {
+font-size: 44px; /* Adjust as needed */
+}
 
-    .fixed-button {
-        top: 1.9%; /* Adjust as needed */
-        left: 0.7%; /* Adjust as needed */
-        font-size: 50px; /* Adjust as needed */
-    }
+.fixed-button {
+top: 2%; /* Adjust as needed */
+left: 1%; /* Adjust as needed */
+font-size: 48px; /* Adjust as needed */
+}
 }
