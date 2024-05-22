@@ -74,7 +74,7 @@ padding: 10px; /* Ensure some space around the text */
 position: fixed;
 top: 2%; /* Adjust as needed */
 left: 2%; /* Adjust as needed */
-z-index: 1; /* Ensure button stays above other content */
+z-index: 2; /* Ensure button stays above other content */
 width: 27px;
 height: 27px;
 background-image: url('files/icons/stripes.png'); /* Replace 'your-icon.png' with the path to your PNG image */
@@ -88,7 +88,7 @@ outline: none !important; /* Remove the blue outline */
 .fixed-button-home {
     position: fixed;
     top: 0%; /* Adjust as needed */
-    left: 2%; /* Adjust as needed */
+    left: 1%; /* Adjust as needed */
     z-index: 2; /* Ensure button stays above other content */
     font-family: Rikhandfont, sans-serif;
     font-size: 30px; /* Adjust as needed */
