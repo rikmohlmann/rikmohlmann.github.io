@@ -47,6 +47,15 @@ body, html {
     display: none; /* For Chrome, Safari, and Opera */
 }
 
+.vertical-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+}
+
 .vertical-text {
     position: absolute;
     top: 6%;
