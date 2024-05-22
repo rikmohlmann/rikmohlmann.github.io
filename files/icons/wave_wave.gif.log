@@ -1,0 +1,22 @@
+C:/Dev/FFMPEG/ffmpeg-2023-04-10-git-b18a9c2971-essentials_build/bin/ffmpeg.exe -hide_banner -y -y -r 24 -start_number 0 -start_number_range 1 -i C:/Dev/Website/rikmohlmann.github.io/files/icons/frame%04d.png -i C:/Dev/Website/rikmohlmann.github.io/files/icons/KritaTempPalettegen_%06d.png -lavfi [0:v][1:v]paletteuse=dither=sierra2_4a:diff_mode=none -f gif -loop 0 -gifflags +transdiff C:/Dev/Website/rikmohlmann.github.io/files/icons/wave_wave.gif
+=====================================================
+Input #0, image2, from 'C:/Dev/Website/rikmohlmann.github.io/files/icons/frame%04d.png':
+  Duration: 00:00:00.76, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 64x64 [SAR 2834:2834 DAR 1:1], 25 fps, 25 tbr, 25 tbn
+Input #1, image2, from 'C:/Dev/Website/rikmohlmann.github.io/files/icons/KritaTempPalettegen_%06d.png':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: N/A
+  Stream #1:0: Video: png, rgba(pc, gbr/unknown/unknown), 16x16 [SAR 1:1 DAR 1:1], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 (png) -> paletteuse
+  Stream #1:0 (png) -> paletteuse
+  paletteuse:default -> Stream #0:0 (gif)
+Press [q] to stop, [?] for help
+[image2 @ 0000028a7dddd200] Thread message queue blocking; consider raising the thread_queue_size option (current value: 8)
+Output #0, gif, to 'C:/Dev/Website/rikmohlmann.github.io/files/icons/wave_wave.gif':
+  Metadata:
+    encoder         : Lavf60.4.101
+  Stream #0:0: Video: gif, pal8(pc, gbr/unknown/unknown, progressive), 64x64 [SAR 1:1 DAR 1:1], q=2-31, 200 kb/s, 24 fps, 100 tbn
+    Metadata:
+      encoder         : Lavc60.9.100 gif
+frame=    0 fps=0.0 q=-0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   19 fps=0.0 q=-0.0 Lsize=       8kB time=00:00:00.75 bitrate=  91.6kbits/s speed=12.5x    
+video:8kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.233536%
