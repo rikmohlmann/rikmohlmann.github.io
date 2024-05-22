@@ -89,7 +89,7 @@ outline: none !important; /* Remove the blue outline */
     position: fixed;
     top: 0%; /* Adjust as needed */
     left: 2%; /* Adjust as needed */
-    z-index: 0; /* Ensure button stays above other content */
+    z-index: 1; /* Ensure button stays above other content */
     font-family: Rikhandfont, sans-serif;
     font-size: 30px; /* Adjust as needed */
     transform: rotate(90deg) translateY(-50%);
