@@ -90,6 +90,10 @@ outline: none !important; /* Remove the blue outline */
     top: 6%; /* Adjust as needed */
     left: 2%; /* Adjust as needed */
     z-index: 0; /* Ensure button stays above other content */
+    font-family: Rikhandfont, sans-serif;
+    font-size: 30px; /* Adjust as needed */
+    transform: rotate(90deg) translateY(-50%);
+    transform-origin: top left;
     width: 27px;
     height: 180px;
     background-color: rgb(255, 255, 255); /* Set the background color to blue */
