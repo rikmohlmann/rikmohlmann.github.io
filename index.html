@@ -6,61 +6,61 @@
     <title>Responsive Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-    @font-face {
-        font-family: 'Rikhandfont';
-        src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
-             url('files/fonts/Rikhandfont-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    body, html {
-        height: 100%;
-        font-family: Rikhandfont, sans-serif;
-    }
+        @font-face {
+            font-family: 'Rikhandfont';
+            src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
+                 url('files/fonts/Rikhandfont-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+body, html {
+    height: 100%;
+    font-family: Rikhandfont, sans-serif;
+}
 
+.container {
+    display: grid;
+    grid-template-columns: 10% 1px 90%;
+    height: 100vh;
+}
+
+.left {
+    background-color: lightgrey;
+    position: relative;
+}
+
+.divider {
+    background-color: black;
+    width: 1px;
+}
+
+.right {
+    background-color: white;
+}
+
+.vertical-text {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Adjust to fit within the left column */
+    transform: rotate(90deg) translateY(-50%);
+    transform-origin: top left;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+    font-size: 20px; /* Adjust as needed */
+    padding: 10px; /* Ensure some space around the text */
+}
+
+@media (min-width: 768px) {
     .container {
-        display: grid;
-        grid-template-columns: 10% 1px 90%;
-        height: 100vh;
-    }
-
-    .left {
-        background-color: lightgrey;
-        position: relative;
-    }
-
-    .divider {
-        background-color: black;
-        width: 1px;
-    }
-
-    .right {
-        background-color: white;
+        grid-template-columns: 3% 1px 97%;
     }
 
     .vertical-text {
-        position: absolute;
-        top: 50%;
-        left: 10px; /* Adjust to fit within the left column */
-        transform: rotate(90deg) translateY(-50%);
-        transform-origin: top left;
-        white-space: nowrap;
-        color: rgb(0, 0, 0);
-        font-size: 80vh; /* Adjust to fit the left column height */
-        line-height: 1; /* Ensure single line height */
-        padding: 0; /* Remove any padding */
+        font-size: 26px; /* Adjust as needed */
     }
+}
 
-    @media (min-width: 768px) {
-        .container {
-            grid-template-columns: 3% 1px 97%;
-        }
-
-        .vertical-text {
-            left: 5px; /* Adjust as needed */
-        }
-    }
-</style>
+    </style>
 </head>
 <body>
     <div class="container">
