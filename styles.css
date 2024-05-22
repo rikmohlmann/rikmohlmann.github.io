@@ -85,7 +85,7 @@ body, html {
     position: fixed;
     top: 2%; /* Adjust as needed */
     left: 2%; /* Adjust as needed */
-    z-index: 1; /* Ensure button stays above other content */
+    z-index: 2; /* Ensure button stays above other content */
     width: 27px;
     height: 27px;
     background-image: url('files/icons/stripes.png'); /* Replace 'your-icon.png' with the path to your PNG image */
