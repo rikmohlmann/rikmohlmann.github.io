@@ -17,6 +17,7 @@ body, html {
     height: 100%;
     font-family: Rikhandfont, sans-serif;
     overflow: hidden; /* Prevent the whole page from scrolling */
+    user-select: none; /* Disable text selection for the whole page */
 }
 
 .container {
@@ -30,6 +31,7 @@ body, html {
     position: relative;
     overflow: auto; /* Make left field scrollable */
     scrollbar-width: none; /* For Firefox */
+    user-select: none; /* Disable text selection for the whole page */
 }
 
 .left::-webkit-scrollbar {
@@ -45,6 +47,7 @@ body, html {
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Make left field scrollable */
     scrollbar-width: none; /* For Firefox */
+    user-select: none; /* Disable text selection for the whole page */
 }
 
 .right::-webkit-scrollbar {
