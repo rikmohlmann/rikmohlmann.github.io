@@ -6,6 +6,7 @@
     <title>Rik Möhlmann</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+
         @font-face {
             font-family: 'Rikhandfont3';
             src: url('files/fonts/Rikhandfont3-Regular.woff2') format('woff2'),
@@ -13,6 +14,7 @@
             font-weight: normal;
             font-style: normal;
         }
+
         body, html {
             height: 100%;
             font-family: Rikhandfont3, sans-serif;
@@ -54,13 +56,17 @@
         .menu-button-section {
             overflow: hidden; /* Fixed sections should not scroll */
             background-color: rgb(255, 255, 255);
+            font-size: 30px; /* Adjust as needed */
+            padding: 10px; /* Ensure some space around the text */
+            transform: rotate(90deg) translateY(-75%);
+            transform-origin: top left;
+            white-space: nowrap;
         }
 
         .home-name-section {
             overflow: hidden; /* Fixed sections should not scroll */
             background-color: rgb(255, 255, 255);
         }
-
 
         .scrollable-bio-section {
             overflow-y: auto; /* Allow vertical scrolling */
@@ -72,26 +78,18 @@
             display: none; /* Hide scrollbars for scrollable sections */
         }
 
-        .vertical-text-bio {
-    transform: rotate(90deg) translateY(-75%);
-    transform-origin: top left;
-    white-space: nowrap;
-    font-size: 30px; /* Adjust as needed */
-    padding: 10px; /* Ensure some space around the text */
-    position: relative;
-}
 
-.vertical-text-bio {
+
+
+        .vertical-text-name{
             transform: rotate(90deg) translateY(-75%);
             transform-origin: top left;
             white-space: nowrap;
-            background-color: rgb(255, 255, 255); 
             font-size: 30px; /* Adjust as needed */
             padding: 10px; /* Ensure some space around the text */
         }
 
-
-        .vertical-text-name{
+        .vertical-text-bio {
             transform: rotate(90deg) translateY(-75%);
             transform-origin: top left;
             white-space: nowrap;
@@ -103,6 +101,9 @@
             display: inline-block; /* Ensure the transform affects only the letter */
             transform: scaleX(-1);
         }
+
+
+
 
         .right {
             background-color: rgb(255, 255, 255);
@@ -119,8 +120,19 @@
             .container {
                 grid-template-columns: 2.5% 1px 97.5%;
             }
+
+            .left {
+            grid-template-rows: 3% 1px 14% 1px 83%; /* Adjust these percentages as needed */
         }
+        }
+
     </style>
+
+
+
+
+
+
 </head>
 <body>
     <div class="container">
@@ -129,14 +141,13 @@
             <div class="section-divider"></div>
             <div class="home-name-section">
                 <div class="vertical-text-name">
-                &nbsp;&nbsp;&nbsp;    
-                Rik Möhlmann
+                    &nbsp;&nbsp;Rik Möhlmann
                 </div>
             </div>
             <div class="section-divider"></div>
             <div class="scrollable-bio-section">
                 <div class="vertical-text-bio">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span class="flip-horizontal">%</span>
                     &nbsp;
                     utilizing computer graphics and synthetic sound with a direct and hands-on approach 
@@ -168,7 +179,7 @@
             </div>
         </div>
         <div class="divider"></div>
-        <div class="right">Right Content</div>
+        <div class="right"></div>
     </div>
 </body>
 </html>
