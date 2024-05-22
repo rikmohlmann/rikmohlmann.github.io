@@ -41,12 +41,12 @@
         }
 
         .divider {
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
             width: 1px;
         }
 
         .section-divider {
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
             width: 100%;
             height: 1px;
         }
@@ -72,6 +72,15 @@
         }
 
         .vertical-text-bio {
+    transform: rotate(90deg) translateY(-75%);
+    transform-origin: top left;
+    white-space: nowrap;
+    font-size: 30px; /* Adjust as needed */
+    padding: 10px; /* Ensure some space around the text */
+    position: relative;
+}
+
+.vertical-text-bio {
             transform: rotate(90deg) translateY(-75%);
             transform-origin: top left;
             white-space: nowrap;
@@ -79,6 +88,7 @@
             font-size: 30px; /* Adjust as needed */
             padding: 10px; /* Ensure some space around the text */
         }
+
 
         .vertical-text-name{
             transform: rotate(90deg) translateY(-75%);
@@ -118,13 +128,14 @@
             <div class="section-divider"></div>
             <div class="home-name-section">
                 <div class="vertical-text-name">
+                &nbsp;&nbsp;&nbsp;    
                 Rik Möhlmann %
                 </div>
             </div>
             <div class="section-divider"></div>
             <div class="scrollable-bio-section">
                 <div class="vertical-text-bio">
-                    &nbsp; 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                     <span class="flip-horizontal">%</span>
                     &nbsp;
                     utilizing computer graphics and synthetic sound with a direct and hands-on approach 
