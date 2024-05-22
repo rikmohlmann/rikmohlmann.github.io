@@ -56,9 +56,10 @@ body, html {
     white-space: nowrap;
     font-size: 30px; /* Adjust as needed */
     padding: 10px; /* Ensure some space around the text */
-    background-image: linear-gradient(to bottom, black 0%, transparent 20%);
-    background-clip: text;
-    color: transparent;
+    color: black; /* Text color */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .non-rotated {
