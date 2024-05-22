@@ -59,18 +59,6 @@ font-size: 30px; /* Adjust as needed */
 padding: 10px; /* Ensure some space around the text */
 }
 
-.vertical-name {
-    z-index: 1; /* Ensure button stays above other content */
-    position: fixed;
-    top: 5%;
-    left: 40%; /* Adjust to fit within the left column */
-    transform: rotate(90deg) translateY(-50%);
-    transform-origin: top left;
-    white-space: nowrap;
-    color: rgb(0, 0, 0);
-    font-size: 30px; /* Adjust as needed */
-    padding: 10px; /* Ensure some space around the text */
-    }
 
 .non-rotated {
     transform: rotate(-90deg); /* Rotate back to normal */
@@ -97,6 +85,20 @@ cursor: pointer;
 outline: none !important; /* Remove the blue outline */
 }
 
+.fixed-button-home {
+    position: fixed;
+    top: 6%; /* Adjust as needed */
+    left: 2%; /* Adjust as needed */
+    z-index: 0; /* Ensure button stays above other content */
+    width: 27px;
+    height: 180px;
+    background-color: rgb(255, 255, 255); /* Set the background color to blue */
+    color: rgb(0, 0, 0); /* Set the text color to white */
+    border: none; /* Remove the border */
+    cursor: pointer; 
+    outline: none !important; /* Remove the blue outline */
+    }
+
 .fixed-button:focus {
 outline: none; /* Remove the blue outline when focused */
 }
@@ -117,3 +119,5 @@ left: 0.7%; /* Adjust as needed */
 font-size: 50px; /* Adjust as needed */
 }
 }
+
+
