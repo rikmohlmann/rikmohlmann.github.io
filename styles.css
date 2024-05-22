@@ -59,6 +59,16 @@ body, html {
     padding: 10px; /* Ensure some space around the text */
 }
 
+.gradient-overlay {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 7%;
+    height: 8%;
+    background: linear-gradient(to bottom, red, blue); /* Adjust colors as needed */
+    pointer-events: none; /* Allow clicking through the overlay */
+}
+
 .non-rotated {
             transform: rotate(-90deg); /* Rotate back to normal */
             display: inline-block;
