@@ -1,14 +1,14 @@
 
 @font-face {
-    font-family: 'Rikhandfont2';
-    src: url('files/fonts/Rikhandfont2-Regular.woff2') format('woff2'),
-         url('files/fonts/Rikhandfont2-Regular.woff') format('woff');
+    font-family: 'Rikhandfont3';
+    src: url('files/fonts/Rikhandfont3-Regular.woff2') format('woff2'),
+         url('files/fonts/Rikhandfont3-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 body, html {
 height: 100%;
-font-family: Rikhandfont2, sans-serif;
+font-family: Rikhandfont3, sans-serif;
 overflow: hidden; /* Prevent the whole page from scrolling */
 user-select: none; /* Disable text selection for the whole page */
 }
@@ -54,17 +54,17 @@ left: 45%; /* Adjust to fit within the left column */
 transform: rotate(90deg) translateY(-50%);
 transform-origin: top left;
 white-space: nowrap;
-background-color: coral; 
+background-color: rgb(255, 255, 255); 
 color: rgb(0, 0, 0);
 font-size: 30px; /* Adjust as needed */
 padding: 10px; /* Ensure some space around the text */
 }
 
 
-.flipped_arrow {
-    transform: rotate(-180deg); /* Rotate back to normal */
-    display: inline-block;
-}
+.flip-horizontal {
+    display: inline-block; /* Ensure the transform affects only the letter */
+    transform: scaleX(-1);
+  }
 
 .fixed-button-menu {
 position: fixed;
@@ -83,10 +83,11 @@ outline: none !important; /* Remove the blue outline */
 
 .rotate-home-text {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -200%) rotate(90deg);
     transform-origin: center;
+    white-space: nowrap
   }
 
 .fixed-button-home {
@@ -94,13 +95,14 @@ outline: none !important; /* Remove the blue outline */
     top: 0%; /* Adjust as needed */
     left: 0.5%; /* Adjust as needed */
     z-index: 1; /* Ensure button stays above other content */
-    font-family: Rikhandfont2, sans-serif;
+    font-family: Rikhandfont3, sans-serif;
     font-size: 30px; /* Adjust as needed */
     /* transform: rotate(90deg) translateY(-50%); */
     transform-origin: top left;
+    white-space: nowrap;
     width: 27px;
     height: 111px;
-    background-color: rgb(144, 223, 7); /* Set the background color to blue */
+    background-color: rgb(255, 255, 255); /* Set the background color to blue */
     color: rgb(0, 0, 0); /* Set the text color to white */
     border: none; /* Remove the border */
     cursor: pointer; 
@@ -132,9 +134,8 @@ font-size: 50px; /* Adjust as needed */
     left: 0.55%; /* Adjust as needed */
     font-size: 40px; /* Adjust as needed */
     width: 35px;
-    height: 280px;
+    height: 380px;
     }
-
 }
 
 
