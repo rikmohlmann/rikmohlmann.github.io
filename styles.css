@@ -69,7 +69,7 @@ padding: 10px; /* Ensure some space around the text */
     display: inline-block;
 }
 
-.fixed-button {
+.fixed-button-menu {
 position: fixed;
 top: 2%; /* Adjust as needed */
 left: 2%; /* Adjust as needed */
