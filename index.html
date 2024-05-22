@@ -5,68 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rik Möhlmann</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'Rikhandfont3';
+            src: url('files/fonts/Rikhandfont3-Regular.woff2') format('woff2'),
+                 url('files/fonts/Rikhandfont3-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body, html {
+            height: 100%;
+            font-family: Rikhandfont3, sans-serif;
+            overflow: hidden; /* Prevent the whole page from scrolling */
+            user-select: none; /* Disable text selection for the whole page */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 7% 1px 93%;
+            height: 100vh;
+        }
+
+        .left {
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            display: grid;
+            grid-template-rows: 5% 1px 20% 1px 75%; /* Adjust these percentages as needed */
+            overflow: hidden; /* Hide overall overflow for the left column */
+            scrollbar-width: none; /* For Firefox */
+            user-select: none; /* Disable text selection for the whole page */
+        }
+
+        .left::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+
+        .divider {
+            background-color: rgb(0, 0, 0);
+            width: 1px;
+        }
+
+        .section-divider {
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            height: 1px;
+        }
+
+        .menu-button-section {
+            overflow: hidden; /* Fixed sections should not scroll */
+            background-color: rgb(255, 255, 255);
+        }
+
+        .home-name-section {
+            overflow: hidden; /* Fixed sections should not scroll */
+            background-color: rgb(255, 255, 255);
+        }
+
+
+        .scrollable-bio-section {
+            overflow: auto; /* Allow scrollable sections to scroll */
+            background-color: rgb(255, 255, 255);
+        }
+
+        .scrollable-bio-section::-webkit-scrollbar {
+            display: none; /* Hide scrollbars for scrollable sections */
+        }
+
+        .vertical-text-bio {
+            transform: rotate(90deg) translateY(-75%);
+            transform-origin: top left;
+            white-space: nowrap;
+            background-color: rgb(255, 255, 255); 
+            font-size: 30px; /* Adjust as needed */
+            padding: 10px; /* Ensure some space around the text */
+        }
+
+        .vertical-text-name{
+            transform: rotate(90deg) translateY(-75%);
+            transform-origin: top left;
+            white-space: nowrap;
+            font-size: 30px; /* Adjust as needed */
+            padding: 10px; /* Ensure some space around the text */
+        }
+
+        .flip-horizontal {
+            display: inline-block; /* Ensure the transform affects only the letter */
+            transform: scaleX(-1);
+        }
+
+        .right {
+            background-color: rgb(255, 255, 255);
+            overflow: auto; /* Make right field scrollable */
+            scrollbar-width: none; /* For Firefox */
+            user-select: none; /* Disable text selection for the whole page */
+        }
+
+        .right::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 2.5% 1px 97.5%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="left">
-            <div class="gradient-overlay"></div> <!-- Add this div for the gradient overlay -->
-            <div class="vertical-text"> 
-                 &nbsp; 
-                 <span class="flip-horizontal">%</span>
-                 &nbsp;
-                 utilizing computer graphics and synthetic sound with a direct and hands-on approach 
-                 &nbsp; 
-                 %
-                  &nbsp; 
-                  exploring various aspects of metaphysics and their practical applications 
-                  &nbsp; 
-                  %
-                   &nbsp;
+            <div class="menu-button-section">X</div>
+            <div class="section-divider"></div>
+            <div class="home-name-section">
+                <div class="vertical-text-name">
+                Rik Möhlmann %
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="scrollable-bio-section">
+                <div class="vertical-text-bio">
+                    &nbsp; 
+                    <span class="flip-horizontal">%</span>
+                    &nbsp;
+                    utilizing computer graphics and synthetic sound with a direct and hands-on approach 
+                    &nbsp; 
+                    %
+                    &nbsp; 
+                    exploring various aspects of metaphysics and their practical applications 
+                    &nbsp; 
+                    %
+                    &nbsp;
                     translating abstract concepts into sounds, images, installations, phone paintings, performances, digital spaces, game environments, musical compositions 
                     &nbsp; 
                     %
                     &nbsp;
-                     practicing a continual process of liberation within the hypnotic spheres of digital tools and their archetypes 
-                     &nbsp; 
-                     %
-                     &nbsp;
-                     contemplating upon technoligy as an extension of the mind-body complex and a playful vehicle for exploring consciousness 
-                     &nbsp; 
-                     <span class="flip-horizontal">%</span>
-                     &nbsp;
-                     &nbsp;
-                     &nbsp;
-                     &nbsp;
-                     &nbsp;
-                     &nbsp;
+                    practicing a continual process of liberation within the hypnotic spheres of digital tools and their archetypes 
+                    &nbsp; 
+                    %
+                    &nbsp;
+                    contemplating upon technoligy as an extension of the mind-body complex and a playful vehicle for exploring consciousness 
+                    &nbsp; 
+                    <span class="flip-horizontal">%</span>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                </div>
             </div>
         </div>
         <div class="divider"></div>
-        <div class="right"></div>
+        <div class="right">Right Content</div>
     </div>
-
-    <!-- Use the PNG image as the button background -->
-    <button id="toggleButtonmenu" class="fixed-button-menu"></button>
-
-    <button id="toggleButtonhome" class="fixed-button-home">
-        <span class="rotate-home-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rik&nbsp;Möhlmann&nbsp;&nbsp;%&nbsp;&nbsp;</span>
-    </button>
-
-    <!-- JavaScript to handle icon toggling -->
-    <script>
-        const toggleButton = document.getElementById('toggleButtonmenu');
-        let isIcon1 = true;
-
-        toggleButton.addEventListener('click', function() {
-            if (isIcon1) {
-                this.style.backgroundImage = 'url("files/icons/cross.png")';
-            } else {
-                this.style.backgroundImage = 'url("files/icons/stripes.png")';
-            }
-            
-            isIcon1 = !isIcon1;
-        });
-</script>
 </body>
 </html>
 

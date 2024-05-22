@@ -32,7 +32,7 @@ display: none; /* For Chrome, Safari, and Opera */
 }
 
 .divider {
-background-color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
 width: 1px;
 }
 
@@ -47,95 +47,12 @@ user-select: none; /* Disable text selection for the whole page */
 display: none; /* For Chrome, Safari, and Opera */
 }
 
-.vertical-text {
-position: absolute;
-top: 24%;
-left: 45%; /* Adjust to fit within the left column */
-transform: rotate(90deg) translateY(-50%);
-transform-origin: top left;
-white-space: nowrap;
-background-color: rgb(109, 11, 120); 
-color: rgb(0, 0, 0);
-font-size: 30px; /* Adjust as needed */
-padding: 10px; /* Ensure some space around the text */
-}
-
-
-.flip-horizontal {
-    display: inline-block; /* Ensure the transform affects only the letter */
-    transform: scaleX(-1);
-  }
-
-.fixed-button-menu {
-position: fixed;
-top: 2%; /* Adjust as needed */
-left: 2%; /* Adjust as needed */
-z-index: 2; /* Ensure button stays above other content */
-width: 27px;
-height: 27px;
-background-image: url('files/icons/stripes.png'); /* Replace 'your-icon.png' with the path to your PNG image */
-background-size: cover;
-background-repeat: no-repeat;
-border: none; /* Remove the border */
-cursor: pointer; 
-outline: none !important; /* Remove the blue outline */
-}
-
-.rotate-home-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -200%) rotate(90deg);
-    transform-origin: center;
-    white-space: nowrap
-  }
-
-.fixed-button-home {
-    position: fixed;
-    top: 0%; /* Adjust as needed */
-    left: 0.7%; /* Adjust as needed */
-    z-index: 1; /* Ensure button stays above other content */
-    font-family: Rikhandfont3, sans-serif;
-    font-size: 30px; /* Adjust as needed */
-    /* transform: rotate(90deg) translateY(-50%); */
-    transform-origin: top left;
-    white-space: nowrap;
-    width: 27px;
-    height: 123px;
-    background-color: rgb(17, 153, 69); /* Set the background color to blue */
-    color: rgb(0, 0, 0); /* Set the text color to white */
-    border: none; /* Remove the border */
-    cursor: pointer; 
-    outline: none !important; /* Remove the blue outline */
-    }
-
-.fixed-button:focus {
-outline: none; /* Remove the blue outline when focused */
-}
 
 
 @media (min-width: 768px) {
 .container {
 grid-template-columns: 2.5% 1px 97.5%;
 }
-
-.vertical-text {
-font-size: 44px; /* Adjust as needed */
-}
-
-.fixed-button-menu {
-top: 1.9%; /* Adjust as needed */
-left: 0.7%; /* Adjust as needed */
-font-size: 50px; /* Adjust as needed */
-}
-
-.fixed-button-home {
-    top: 0%; /* Adjust as needed */
-    left: 0.55%; /* Adjust as needed */
-    font-size: 42px; /* Adjust as needed */
-    width: 35px;
-    height: 380px;
-    }
 }
 
 
