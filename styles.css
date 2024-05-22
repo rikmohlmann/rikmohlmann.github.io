@@ -65,7 +65,7 @@ body, html {
     z-index: 1; /* Ensure overlay stays above other content */
     top: 5%;
     left: 0%;
-    width: 100%;
+    width: 50%;
     height: 3%;
     background: linear-gradient(to bottom, rgb(35, 255, 1), rgb(0, 21, 255)); /* Adjust colors as needed */
     pointer-events: none; /* Allow clicking through the overlay */
