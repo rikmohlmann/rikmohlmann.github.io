@@ -1,11 +1,11 @@
-@font-face {
-    font-family: 'Rikhandfont';
-    src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
-         url('files/fonts/Rikhandfont-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
+        @font-face {
+            font-family: 'Rikhandfont';
+            src: url('files/fonts/Rikhandfont-Regular.woff2') format('woff2'),
+                 url('files/fonts/Rikhandfont-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 body, html {
     height: 100%;
     font-family: Rikhandfont, sans-serif;
@@ -38,7 +38,7 @@ body, html {
 
 .right {
     background-color: rgb(255, 255, 255);
-    overflow: auto; /* Make right field scrollable */
+    overflow: auto; /* Make left field scrollable */
     scrollbar-width: none; /* For Firefox */
     user-select: none; /* Disable text selection for the whole page */
 }
@@ -54,26 +54,22 @@ body, html {
     transform: rotate(90deg) translateY(-50%);
     transform-origin: top left;
     white-space: nowrap;
+    color: rgb(0, 0, 0);
     font-size: 30px; /* Adjust as needed */
     padding: 10px; /* Ensure some space around the text */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to bottom, black 0%, transparent 20%);
 }
 
 .non-rotated {
-    transform: rotate(-90deg); /* Rotate back to normal */
-    display: inline-block;
-}
+            transform: rotate(-90deg); /* Rotate back to normal */
+            display: inline-block;
+        }
 
-.double-rotated {
-    transform: rotate(90deg); /* Rotate back to normal */
-    display: inline-block;
-}
+        .double-rotated {
+            transform: rotate(90deg); /* Rotate back to normal */
+            display: inline-block;
+        }
 
-.fixed-button {
+        .fixed-button {
     position: fixed;
     top: 2%; /* Adjust as needed */
     left: 2%; /* Adjust as needed */
@@ -91,6 +87,7 @@ body, html {
 .fixed-button:focus {
     outline: none; /* Remove the blue outline when focused */
 }
+
 
 @media (min-width: 768px) {
     .container {
