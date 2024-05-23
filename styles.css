@@ -66,10 +66,10 @@
         }
 
         .vertical-text-bio {
-            transform: rotate(90deg) translateY(-70%);
+            transform: rotate(90deg) translateY(-75%);
             transform-origin: top left;
             white-space: nowrap;
-            font-size: 7vw; /* Adjust as needed */
+            font-size: 6vw; /* Adjust as needed */
             padding: 1.5vw; /* Ensure some space around the text */
             color: blue; 
         }
@@ -90,7 +90,7 @@
 
         .right img {
             max-width: 100%; /* Ensure images fit within the width of the container */
-            height: auto; /* Maintain aspect ratio */
+            
         }
 
         .right::-webkit-scrollbar {
@@ -144,6 +144,10 @@
         @media (orientation: landscape) { 
             .container {
                 width: 100vw
+            }
+
+            .left {
+                width: 3vw;
             }
 
             .menu-button-section {
