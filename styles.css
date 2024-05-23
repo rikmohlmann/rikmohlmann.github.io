@@ -1,0 +1,156 @@
+
+        @font-face {
+            font-family: 'Rikhandfont3';
+            src: url('files/fonts/Rikhandfont3-Regular.woff2') format('woff2'),
+                 url('files/fonts/Rikhandfont3-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Rikhandfont3, sans-serif;
+            overflow: hidden; /* Prevent the whole page from scrolling */
+            user-select: none; /* Disable text selection for the whole page */
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 6vw;
+        }
+
+        .left {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            width: 5vw;
+            overflow: hidden; /* Hide overall overflow for the left column */
+            scrollbar-width: none; /* For Firefox */
+            user-select: none; /* Disable text selection for the whole page */
+        }
+
+        .left::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+
+        .divider {
+            background-color: rgb(0, 0, 0);
+            width: 1px;
+        }
+
+        .section-divider {
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            height: 1px;
+        }
+
+        .menu-button-section {
+            background-color: rgb(255, 255, 255);
+            font-size: 5vw; /* Adjust as needed */
+            padding: 1vw; /* Ensure some space around the text */
+            transform: rotate(90deg) translateY(-75%);
+            transform-origin: top left;
+            white-space: nowrap;
+        }
+
+        .scrollable-bio-section {
+            flex-grow: 1;
+            overflow-y: auto; /* Allow vertical scrolling */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            background-color: rgb(255, 255, 255);
+        }
+
+        .scrollable-bio-section::-webkit-scrollbar {
+            display: none; /* Hide scrollbars for scrollable sections */
+        }
+
+        .vertical-text-bio {
+            transform: rotate(90deg) translateY(-70%);
+            transform-origin: top left;
+            white-space: nowrap;
+            font-size: 7vw; /* Adjust as needed */
+            padding: 1.5vw; /* Ensure some space around the text */
+            color: blue; 
+        }
+
+        .flip-horizontal {
+            display: inline-block; /* Ensure the transform affects only the letter */
+            transform: scaleX(-1);
+        }
+
+        .right {
+            background-color: rgb(255, 255, 255);
+            flex-grow: 1;
+            overflow: auto; /* Make right field scrollable */
+            scrollbar-width: none; /* For Firefox */
+            user-select: none; /* Disable text selection for the whole page */
+        }
+
+        .right::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+
+
+        
+
+        /* smaller screens, typically smartphones in portrait mode.*/
+        @media (max-width: 768) { 
+            .container {
+                width: 3vw;
+            }
+
+            .menu-button-section {
+                transform: rotate(90deg) translateY(-80%);
+                font-size: 2.5vw; /* Adjust as needed */
+                padding: 2.5vw; /* Ensure some space around the text */
+            }
+
+            .vertical-text-bio {
+                transform: rotate(90deg) translateY(-75%);
+                font-size: 3vw; /* Adjust as needed */
+                padding: 1vw; /* Ensure some space around the text */
+                color: rgb(139, 0, 130);
+            }
+        }
+        
+
+        /* larger smartphones and tablets in portrait mode.*/
+        @media (min-width: 769px) and (max-width: 1440px) { 
+            .container {
+                width: 4vw;
+            }
+
+            .menu-button-section {
+                transform: rotate(90deg) translateY(-75%);
+                font-size: 5vw; /* Adjust as needed */
+                padding: 1.5vw; /* Ensure some space around the text */
+            }
+
+            .vertical-text-bio {
+                transform: rotate(90deg) translateY(-65%);
+                font-size: 5vw; /* Adjust as needed */
+                padding: 1.5vw; /* Ensure some space around the text */
+                color: rgb(43, 179, 1);
+            }
+        }
+
+        /* landscape orientation for any screen size.*/
+        @media (orientation: landscape) { 
+            .container {
+                width: 3vw;
+            }
+
+            .menu-button-section {
+                transform: rotate(90deg) translateY(-80%);
+                font-size: 2.5vw; /* Adjust as needed */
+                padding: 1.5vw; /* Ensure some space around the text */
+            }
+
+            .vertical-text-bio {
+                transform: rotate(90deg) translateY(-72%);
+                font-size: 2.5vw; /* Adjust as needed */
+                padding: 2vw; /* Ensure some space around the text */
+                color: rgb(135, 133, 0);
+            }
+        }
