@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
 
-        @font-face {
+@font-face {
     font-family: 'Rikhandfont3';
     src: url('files/fonts/Rikhandfont3-Regular.woff2') format('woff2'),
          url('files/fonts/Rikhandfont3-Regular.woff') format('woff');
@@ -62,6 +62,11 @@ body, html {
     white-space: nowrap;
 }
 
+.home-name-section {
+    overflow: hidden; /* Fixed sections should not scroll */
+    background-color: rgb(255, 255, 255);
+}
+
 .scrollable-bio-section {
     overflow-y: auto; /* Allow vertical scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -70,6 +75,14 @@ body, html {
 
 .scrollable-bio-section::-webkit-scrollbar {
     display: none; /* Hide scrollbars for scrollable sections */
+}
+
+.vertical-text-name {
+    transform: rotate(90deg) translateY(-75%);
+    transform-origin: top left;
+    white-space: nowrap;
+    font-size: 2vw; /* Adjust as needed */
+    padding: 1vw; /* Ensure some space around the text */
 }
 
 .vertical-text-bio {
@@ -111,11 +124,17 @@ body, html {
         padding: 2.5vw; /* Ensure some space around the text */
     }
 
+    .vertical-text-name {
+        font-size: 2.5vw; /* Adjust as needed */
+        padding: 2vw; /* Ensure some space around the text */
+    }
+
     .vertical-text-bio {
         font-size: 2.5vw; /* Adjust as needed */
         padding: 2vw; /* Ensure some space around the text */
     }
 }
+
 
     </style>
 
@@ -127,9 +146,15 @@ body, html {
         <div class="left">
             <div class="menu-button-section">X</div>
             <div class="section-divider"></div>
+            <div class="home-name-section">
+                <div class="vertical-text-name">
+                    &nbsp;Rik Möhlmann
+                </div>
+            </div>
+            <div class="section-divider"></div>
             <div class="scrollable-bio-section">
                 <div class="vertical-text-bio">
-                    &nbsp;&nbsp;&nbsp;&nbsp;Rik Möhlmann
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <span class="flip-horizontal">%</span>
                     &nbsp;
                     utilizing computer graphics and synthetic sound with a direct and hands-on approach 
@@ -165,3 +190,5 @@ body, html {
     </div>
 </body>
 </html>
+
+
