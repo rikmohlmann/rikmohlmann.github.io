@@ -88,6 +88,11 @@
             user-select: none; /* Disable text selection for the whole page */
         }
 
+        .right img {
+            max-width: 100%; /* Ensure images fit within the width of the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
         .right::-webkit-scrollbar {
             display: none; /* For Chrome, Safari, and Opera */
         }
