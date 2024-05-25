@@ -97,8 +97,6 @@
             display: none; /* For Chrome, Safari, and Opera */
         }
 
-
-    
         /* smaller screens, typically smartphones in portrait mode.*/
         @media (max-width: 768) { 
             .container {
@@ -115,13 +113,12 @@
                 transform: rotate(90deg) translateY(-75%);
                 font-size: 3vw; /* Adjust as needed */
                 padding: 1vw; /* Ensure some space around the text */
-                color: rgb(139, 0, 130);
+                color: rgb(125, 7, 155);
             }
         }
         
-
-        /* larger smartphones and tablets in portrait mode.*/
-        @media (min-width: 769px) and (max-width: 1440px) { 
+        /* medium smartphones in portrait mode.*/
+        @media (min-width: 769px) and (max-width: 1080px) { 
             .container {
                 width: 100vw
             }
@@ -136,7 +133,27 @@
                 transform: rotate(90deg) translateY(-65%);
                 font-size: 5vw; /* Adjust as needed */
                 padding: 1.5vw; /* Ensure some space around the text */
-                color: rgb(43, 179, 1);
+                color: rgb(255, 0, 0);
+            }
+        }
+
+        /* larger smartphones and tablets in portrait mode.*/
+        @media (min-width: 1080px) and (max-width: 1440px) { 
+            .container {
+                width: 100vw
+            }
+
+            .menu-button-section {
+                transform: rotate(90deg) translateY(-75%);
+                font-size: 5vw; /* Adjust as needed */
+                padding: 1.5vw; /* Ensure some space around the text */
+            }
+
+            .vertical-text-bio {
+                transform: rotate(90deg) translateY(-65%);
+                font-size: 5vw; /* Adjust as needed */
+                padding: 1.5vw; /* Ensure some space around the text */
+                color: rgb(91, 228, 0);
             }
         }
 
