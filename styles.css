@@ -130,8 +130,8 @@
             }
 
             .vertical-text-bio {
-                transform: rotate(90deg) translateY(-65%);
-                font-size: 5vw; /* Adjust as needed */
+                transform: rotate(90deg) translateY(-75%);
+                font-size: 6vw; /* Adjust as needed */
                 padding: 1.5vw; /* Ensure some space around the text */
                 color: rgb(255, 0, 0);
             }
@@ -177,6 +177,6 @@
                 transform: rotate(90deg) translateY(-72%);
                 font-size: 2.5vw; /* Adjust as needed */
                 padding: 2vw; /* Ensure some space around the text */
-                color: rgb(135, 133, 0);
+                color: rgb(197, 193, 0);
             }
         }
