@@ -49,9 +49,15 @@
             background-color: rgb(255, 255, 255);
             font-size: 5vw; /* Adjust as needed */
             padding: 1vw; /* Ensure some space around the text */
-            transform: rotate(90deg) translateY(-75%);
-            transform-origin: top left;
             white-space: nowrap;
+        }
+
+        .menu-button-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire area */
+            cursor: pointer; /* Indicate it's clickable */
+            color: #40ff00;
         }
 
         .scrollable-bio-section {
