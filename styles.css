@@ -71,7 +71,7 @@
             white-space: nowrap;
             font-size: 6vw; /* Adjust as needed */
             padding: 1.5vw; /* Ensure some space around the text */
-            color: blue; 
+            color: rgb(255, 153, 0); 
         }
 
         .flip-horizontal {
